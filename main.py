@@ -100,9 +100,6 @@ def sidebar_data():
 
 
 
-
-
-
 @app.route('/')
 @app.route('/<int:page>')
 def home(page=1):
