@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         {{ post.text | truncate(255) | safe }}
-                        <a href="{{ for_url('posts', post_id=post.id) }}">Read More</a>
+                        <a href="{{ url_for('post', post_id=post.id) }}">Read More</a>
                     </div>
                 </div>
             {% endfor %}
@@ -33,7 +33,7 @@
                 <ul>
                     {% for tag in top_tags%}
                         <li>
-                        <a href="{{ for_url('tag', tag_name=tag[0].title) }}">{{ tag[0].title }}</a>
+                        <a href="{{ url_for('tag', tag_name=tag[0].title) }}">{{ tag[0].title }}</a>
                         </li>
                     {% endfor %}
                 </ul>
